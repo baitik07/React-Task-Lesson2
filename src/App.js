@@ -1,23 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button } from "react-bootstrap";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Section from "./components/Section";
+import "../src/App.css";
 
 function App() {
+  const baatyry = [
+    {
+      name: "Манас",
+      lastName: "Айтекеев",
+      age: 25,
+      id: 1,
+    },
+    {
+      name: "Сейтек",
+      lastName: "Матекеев",
+      age: 32,
+      id: 2,
+    },
+    {
+      name: "Кантемир",
+      lastName: "Дастанов",
+      age: 41,
+      id: 3,
+    },
+    {
+      name: "Алтынбек",
+      lastName: "Торобеков",
+      age: 28,
+      id: 4,
+    },
+    {
+      name: "Чынгыз",
+      lastName: "Тарыков",
+      age: 37,
+      id: 5,
+    },
+    {
+      name: "Курманжан",
+      lastName: "Датка Алай",
+      age: 60,
+      id: 6,
+    },
+    {
+      name: "Кулубек",
+      lastName: "Торо",
+      age: 22,
+      id: 7,
+    },
+    {
+      name: "Сайна",
+      lastName: "Каныбеков",
+      age: 29,
+      id: 8,
+    },
+    {
+      name: "Узбек",
+      lastName: "Торо",
+      age: 35,
+      id: 9,
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Section baatyry={baatyry} />
+      <Footer />
     </div>
   );
 }
